@@ -13,6 +13,10 @@
 
         <activity
             android:name=".ui.TelaFavoritos"
+            android:name=".ui.TelaAtividade"
+            android:exported="false" />
+        <activity
+            android:name=".ui.TelaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
