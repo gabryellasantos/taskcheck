@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">taskcheck</string>
+    <string name="app_name">Taskcheck</string>
+    <string name="logo_name">taskcheck</string>
+
+    <string name="title_favoritos">Favoritos</string>
+
+    <string name="task_example_1">Entregar atividade - POO</string>
+
+    <string name="desc_menu">Abrir menu lateral</string>
+    <string name="desc_check_icon">Indicador de status da tarefa</string>
+    <string name="desc_arrow_icon">Ver detalhes da tarefa</string>
 </resources>
