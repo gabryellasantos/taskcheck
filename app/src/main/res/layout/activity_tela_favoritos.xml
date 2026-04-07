@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="taskcheck"
+            android:textColor="#3D91FF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/btnMenu"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/logo">
+            <View android:layout_width="match_parent" android:layout_height="3dp" android:background="#3D91FF" />
+            <View android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="5dp" android:background="#3D91FF" />
+            <View android:layout_width="match_parent" android:layout_height="3dp" android:layout_marginTop="5dp" android:background="#3D91FF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/labelTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Favoritos"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <LinearLayout
+            android:id="@+id/containerFavoritos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/labelTitulo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tarefa_item"
+                android:clipToOutline="true">
+                <View
+                    android:id="@+id/strip1"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:background="#0052D4"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/bg_circle_blue"
+                    android:backgroundTint="#FFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/strip1"
+                    app:layout_constraintStart_toStartOf="@id/strip1"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="Entregar atividade - POO"
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow1"
+                    app:layout_constraintStart_toEndOf="@id/strip1"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text=">"
+                    android:textColor="#555"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_tarefa_item"
+                android:clipToOutline="true">
+                <View
+                    android:id="@+id/strip2"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:background="#7F44FF"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <View
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/bg_circle_blue"
+                    android:backgroundTint="#FFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/strip2"
+                    app:layout_constraintStart_toStartOf="@id/strip2"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="Comprar presente de aniversár..."
+                    android:textColor="#FFF"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/arrow2"
+                    app:layout_constraintStart_toEndOf="@id/strip2"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text=">"
+                    android:textColor="#555"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
