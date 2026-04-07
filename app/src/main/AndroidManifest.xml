@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Taskcheck">
         <activity
-            android:name=".ui.TelaAtividade"
-            android:exported="false" />
-        <activity
             android:name=".ui.TelaInicial"
             android:exported="true">
             <intent-filter>
