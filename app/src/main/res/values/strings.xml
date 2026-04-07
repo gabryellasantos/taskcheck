@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">taskcheck</string>
+    <string name="logo_name">taskcheck</string>
+    <string name="t_tulo_da_tarefa">Título da tarefa</string>
+    <string name="criar_nova_tarefa">Criar nova tarefa</string>
+    <string name="lembrete">Lembrete</string>
+    <string name="label_categoria">Categoria</string>
+    <string name="data">Data</string>
+    <string name="fim">Fim</string>
+    <string name="in_cio">Início</string>
+    <string name="hint_escreva_aqui">Escreva aqui&#8230;</string>
+    <string name="label_descricao">Descrição da tarefa</string>
+    <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_cria_tarefa">Cria tarefa</string>
+    <string name="selecione">Selecione</string>
+    <string name="uma_hora_antes">1h antes</string>
+    <string name="desc_menu">Menu</string>
+    <string name="btn_create_task">Criar nova tarefa</string>
+    <string name="label_favoritos">Favoritos</string>
+    <string name="label_categorias">Categorias</string>
+    <string name="label_tarefas">Tarefas</string>
+    <string name="task_example_1">Entregar atividade - POO</string>
+    <string name="desc_add_icon">Ícone de adicionar</string>
+    <string name="desc_heart_icon">Ícone de favoritos</string>
+    <string name="desc_tag_icon">Ícone de categorias</string>
+    <string name="desc_check_icon">Ícone de status da tarefa</string>
+    <string name="desc_arrow_icon">Ver detalhes da tarefa</string>
+    <string name="title_favoritos">Favoritos</string>
 </resources>

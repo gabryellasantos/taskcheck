@@ -6,32 +6,27 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.taskcheck.databinding.ActivityMainBinding
+import com.example.taskcheck.databinding.ActivityTelaAtividadeBinding
 
-class TelaInicial : AppCompatActivity() {
+class TelaAtividade : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityTelaAtividadeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityTelaAtividadeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(0, systemBars.top, 0, 0)
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        binding.btnFavoritos.setOnClickListener {
-            val intent = Intent(this, TelaFavoritos::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnCreateTask.setOnClickListener {
-            val intent = Intent(this, TelaAtividade::class.java)
+        binding.btnMenu.setOnClickListener {
+            val intent = Intent(this, TelaInicial::class.java)
             startActivity(intent)
         }
     }
