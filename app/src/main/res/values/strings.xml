@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">taskcheck</string>
+    <string name="app_name">Taskcheck</string>
+    <string name="logo_name">taskcheck</string>
+    <string name="btn_create_task">Criar nova tarefa</string>
+    <string name="label_favoritos">Favoritos</string>
+    <string name="label_categorias">Categorias</string>
+    <string name="label_tarefas">Tarefas</string>
+    <string name="task_example_1">Entregar atividade - POO</string>
+
+    <string name="desc_menu">Abrir menu</string>
+    <string name="desc_add_icon">Ícone de adicionar</string>
+    <string name="desc_heart_icon">Ícone de favoritos</string>
+    <string name="desc_tag_icon">Ícone de categorias</string>
+    <string name="desc_check_icon">Ícone de status da tarefa</string>
+    <string name="desc_arrow_icon">Ver detalhes da tarefa</string>
 </resources>
