@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">taskcheck</string>
+    <string name="t_tulo_da_tarefa">Título da tarefa</string>
+    <string name="criar_nova_tarefa">Criar nova tarefa</string>
+    <string name="lembrete">Lembrete</string>
+    <string name="categoria">Categoria</string>
+    <string name="data">Data</string>
+    <string name="fim">Fim</string>
+    <string name="in_cio">Início</string>
 </resources>
