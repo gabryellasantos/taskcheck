@@ -32,10 +32,10 @@
             android:layout_height="32dp"
             android:layout_marginEnd="24dp"
             android:src="@drawable/ic_menu"
-            app:tint="#3D91FF"
             app:layout_constraintBottom_toBottomOf="@id/logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/logo"
+            app:tint="#3D91FF"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -59,10 +59,10 @@
             app:cardBackgroundColor="#252525"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            app:strokeWidth="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txtTituloCriarTarefa">
+            app:layout_constraintTop_toBottomOf="@id/txtTituloCriarTarefa"
+            app:strokeWidth="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -76,11 +76,9 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/t_tulo_da_tarefa"
                     android:textColorHint="#AAAAAA"
-                    app:hintTextColor="#3D91FF"
                     app:boxStrokeColor="#3D91FF"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:hintTextColor="#3D91FF"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/edtNomeTarefa"
@@ -95,6 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@id/layoutNome">
 
@@ -102,11 +101,12 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
                         android:hint="@string/in_cio"
                         android:textColorHint="#AAAAAA"
                         app:hintTextColor="#3D91FF">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -118,11 +118,12 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginHorizontal="4dp"
+                        android:layout_weight="1"
                         android:hint="@string/fim"
                         android:textColorHint="#AAAAAA"
                         app:hintTextColor="#3D91FF">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -134,11 +135,12 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.2"
                         android:layout_marginStart="4dp"
+                        android:layout_weight="1.2"
                         android:hint="@string/data"
                         android:textColorHint="#AAAAAA"
                         app:hintTextColor="#3D91FF">
+
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -152,18 +154,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:baselineAligned="false"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@id/rowDatas">
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/labelCat"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
                         android:hint="@string/label_categoria"
                         android:textColorHint="#AAAAAA"
                         app:hintTextColor="#3D91FF">
+
                         <AutoCompleteTextView
                             android:id="@+id/selectCategoria"
                             android:layout_width="match_parent"
@@ -175,14 +180,16 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/labelLem"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
+                        android:layout_weight="1"
                         android:hint="@string/lembrete"
                         android:textColorHint="#AAAAAA"
                         app:hintTextColor="#3D91FF">
+
                         <AutoCompleteTextView
                             android:id="@+id/selectLembrete"
                             android:layout_width="match_parent"
@@ -216,20 +223,22 @@
 
                 <LinearLayout
                     android:id="@+id/rowButtons"
+                    style="?android:attr/buttonBarStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    app:layout_constraintTop_toBottomOf="@id/layoutDescricao"
-                    app:layout_constraintBottom_toBottomOf="parent">
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutDescricao">
 
                     <Button
                         android:id="@+id/btnCancelar"
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
-                        android:layout_weight="1"
                         android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
                         android:backgroundTint="#B53636"
                         android:text="@string/btn_cancelar"
                         android:textAllCaps="true"
@@ -239,10 +248,11 @@
 
                     <Button
                         android:id="@+id/btnCriar"
+                        style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="0dp"
                         android:layout_height="55dp"
-                        android:layout_weight="1"
                         android:layout_marginStart="8dp"
+                        android:layout_weight="1"
                         android:backgroundTint="#3D91FF"
                         android:text="@string/btn_cria_tarefa"
                         android:textAllCaps="true"
