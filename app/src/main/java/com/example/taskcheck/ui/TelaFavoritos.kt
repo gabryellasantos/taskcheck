@@ -1,6 +1,5 @@
 package com.example.taskcheck.ui
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,9 +23,9 @@ class TelaFavoritos : AppCompatActivity() {
             v.setPadding(0, systemBars.top, 0, 0)
             insets
         }
+
         binding.btnMenu.setOnClickListener {
-            val intent = Intent(this, TelaInicial::class.java)
-            startActivity(intent)
+            finish() // Melhor usar finish() para voltar à tela anterior
         }
     }
 }

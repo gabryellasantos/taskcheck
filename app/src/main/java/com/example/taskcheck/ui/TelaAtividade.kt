@@ -1,33 +1,37 @@
 package com.example.taskcheck.ui
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.taskcheck.databinding.ActivityTelaAtividadeBinding
+import com.example.taskcheck.R
+import com.example.taskcheck.repository.TaskRepository
 
 class TelaAtividade : AppCompatActivity() {
 
-    private lateinit var binding: ActivityTelaAtividadeBinding
+    private lateinit var edtNome: EditText
+    private lateinit var btnCriar: Button
+    private lateinit var btnCancelar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge()
+        setContentView(R.layout.activity_tela_atividade)
 
-        binding = ActivityTelaAtividadeBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        edtNome = findViewById(R.id.edtNomeTarefa)
+        btnCriar = findViewById(R.id.btnCriar)
+        btnCancelar = findViewById(R.id.btnCancelar)
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        btnCriar.setOnClickListener {
+            val nome = edtNome.text.toString()
+            if (nome.isNotEmpty()) {
+                TaskRepository.addTask(nome)
+                finish()
+            }
         }
-        binding.btnMenu.setOnClickListener {
-            val intent = Intent(this, TelaInicial::class.java)
-            startActivity(intent)
+
+        btnCancelar.setOnClickListener {
+            finish()
         }
     }
 }

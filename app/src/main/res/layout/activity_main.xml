@@ -34,6 +34,9 @@
             android:layout_marginTop="28dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/bg_card_rounded"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo">
@@ -158,6 +161,7 @@
             app:layout_constraintTop_toBottomOf="@id/rowFast" />
 
         <LinearLayout
+            android:id="@+id/containerTarefas"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -166,51 +170,7 @@
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/titleTasks">
+            app:layout_constraintTop_toBottomOf="@id/titleTasks" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/bg_tarefa_item"
-                tools:targetApi="s"> <View
-                android:id="@+id/side"
-                android:layout_width="45dp"
-                android:layout_height="match_parent"
-                android:background="#3D91FF"
-                app:layout_constraintStart_toStartOf="parent" />
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_circle"
-                    android:contentDescription="@string/desc_check_icon"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/side"
-                    app:layout_constraintStart_toStartOf="@id/side"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="#FFF" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:text="@string/task_example_1"
-                    android:textColor="#FFF"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/arr"
-                    app:layout_constraintStart_toEndOf="@id/side"
-                    app:layout_constraintTop_toTopOf="parent" />
-                <ImageView
-                    android:id="@+id/arr"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginEnd="16dp"
-                    android:src="@drawable/ic_arrow"
-                    android:contentDescription="@string/desc_arrow_icon"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:tint="#555" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
