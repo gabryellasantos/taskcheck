@@ -25,7 +25,7 @@ class TelaFavoritos : AppCompatActivity() {
         }
 
         binding.btnMenu.setOnClickListener {
-            finish() // Melhor usar finish() para voltar à tela anterior
+            finish()
         }
     }
 }
